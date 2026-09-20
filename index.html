@@ -605,6 +605,15 @@
     <div class="detail-grid" id="detail-grid"></div>
   </div>
 </section>
+  
+<section id="agenda">
+  <div class="section-head">
+    <h2>Agenda</h2>
+    <span class="count">Eventos</span>
+  </div>
+
+  <div id="events-grid" class="events-grid"></div>
+</section>
 
 <script>
   const catalogTrigger = document.getElementById('catalog-trigger');
@@ -758,6 +767,50 @@
       ]
     }
   };
+
+  // ====================
+// AGENDA DE EVENTOS
+// ====================
+
+const EVENTS = [
+  {
+    title: "Feira de Artesanato",
+    date: "2026-09-27",
+    time: "10:00 - 18:00",
+    location: "Barreiro",
+    description: "Visita-nos na nossa banca!"
+  },
+
+  {
+    title: "Mercado de Natal",
+    date: "2026-12-12",
+    time: "10:00 - 19:00",
+    location: "Lisboa",
+    description: "Vários produtos da Magus Art disponíveis."
+  }
+];
+  const eventsGrid = document.getElementById("events-grid");
+
+function buildEvents() {
+  eventsGrid.innerHTML = "";
+
+  EVENTS.forEach(event => {
+    const card = document.createElement("div");
+    card.className = "event-card";
+
+    card.innerHTML = `
+      <h3>${event.title}</h3>
+      <p>📅 ${event.date}</p>
+      <p>🕐 ${event.time}</p>
+      <p>📍 ${event.location}</p>
+      <p>${event.description}</p>
+    `;
+
+    eventsGrid.appendChild(card);
+  });
+}
+
+buildEvents();
 
   const romans = ['I','II','III','IV','V','VI','VII','VIII'];
   const grid = document.getElementById('catalog-grid');
