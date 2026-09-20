@@ -4,7 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Magus Art — Esculturas 3D</title>
-<style>
+<style> .partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.partner-card {
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.partner-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.partner-card p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.partner-instagram {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
 
   :root{
@@ -985,6 +1014,33 @@ buildEvents();
     <a href="https://www.facebook.com/profile.php?id=61556032401637">Facebook</a>
     <a href="https://www.instagram.com/magusartofficial/" target="_blank" rel="noopener">Instagram</a>
     <a href="https://wa.me/+351927732127">Whatsapp</a>
+  </div>
+</section>
+<section id="parceiros">
+  <div class="section-head">
+    <h2>Parceiros</h2>
+    <span class="count">Os nossos parceiros</span>
+  </div>
+
+  <div class="partners-grid">
+
+    <div class="partner-card">
+      <h3>TP3D - Design</h3>
+
+      <p>
+        Impressão 3D, Modelação 3D, Produtos personalizados e Pintura artesanal
+      </p>
+
+      <a
+        href="https://www.instagram.com/tp3d.design/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="partner-instagram"
+      >
+        Instagram
+      </a>
+    </div>
+
   </div>
 </section>
 
